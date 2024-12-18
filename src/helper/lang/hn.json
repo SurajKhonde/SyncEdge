@@ -1,0 +1,13 @@
+{
+    "userAlreadyExists": "उपयोगकर्ता पहले ही मौजूद है",
+    "userRegisteredSuccessfully": "उपयोगकर्ता सफलतापूर्वक पंजीकृत हो गया",
+    "internalServerError": "आंतरिक सर्वर त्रुटि",
+    "userLoginSuccessfully": "उपयोगकर्ता सफलतापूर्वक लॉगिन हो गया",
+    "pleaseCheckMaybePasswordOrUsernameWrong": "कृपया जांचें, शायद पासवर्ड या उपयोगकर्ता नाम गलत हो",
+    "userNotFound": "उपयोगकर्ता नहीं मिला।",
+    "noEmailOrMobileNumberFound": "उपयोगकर्ता के लिए कोई ईमेल या मोबाइल नंबर नहीं मिला।",
+    "errorGeneratingQRCode": "QR कोड जनरेट करते समय त्रुटि हुई।",
+    "codeGeneratedSuccessfully": "कोड सफलतापूर्वक जनरेट किया गया",
+    "somethingWentWrongDuringProcess": "प्रक्रिया के दौरान कुछ गलत हुआ।"
+  }
+  

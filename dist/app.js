@@ -37,14 +37,27 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const body_parser_1 = __importDefault(require("body-parser"));
+const i18n_1 = __importDefault(require("i18n"));
+const userRoute_1 = __importDefault(require("./routes/userRoute"));
 const dotenv = __importStar(require("dotenv"));
+const errorLogmaintainer_1 = __importDefault(require("./utils/errorLogmaintainer"));
 dotenv.config();
 const app = (0, express_1.default)();
-const port = process.env.port;
-app.get('/', (req, res) => {
-    res.send('Hello World!');
+app.use(i18n_1.default.init);
+app.use(body_parser_1.default.json());
+const port = process.env.port || 3000;
+app.use(function (req, res, next) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+    res.setHeader("Access-Control-Allow-Headers", "*");
+    res.setHeader("Access-Control-Allow-Credentials", "true"); // Change to string
+    next();
 });
-// Start the server
+app.use("/api/v1", userRoute_1.default);
+setInterval(() => {
+    (0, errorLogmaintainer_1.default)();
+}, 24 * 60 * 60 * 1000);
 app.listen(port, () => {
     console.log(`App running at http://localhost:${port}`);
 });

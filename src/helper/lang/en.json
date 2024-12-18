@@ -1,0 +1,13 @@
+{
+    "userAlreadyExists": "User already exists",
+    "userRegisteredSuccessfully": "User registered successfully",
+    "internalServerError": "Internal server error",
+    "userLoginSuccessfully": "User login successfully",
+    "pleaseCheckMaybePasswordOrUsernameWrong": "Please check, maybe password or username is wrong",
+    "userNotFound": "User not found.",
+    "noEmailOrMobileNumberFound": "No email or mobile number found for the user.",
+    "errorGeneratingQRCode": "Error generating QR code.",
+    "codeGeneratedSuccessfully": "Code generated successfully",
+    "somethingWentWrongDuringProcess": "Something went wrong during the process."
+  }
+  

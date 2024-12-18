@@ -13,9 +13,14 @@ RUN npm install
 # Copy the rest of the application files
 COPY . .
 
+# Install TypeScript and ts-node globally (in case it's not installed)
+RUN npm install -g typescript ts-node
+
 # Expose the application port
 EXPOSE 3000
 
-# Command to run your application
-CMD ["node", "app.ts"]
+# Build TypeScript into JavaScript
+RUN tsc
 
+# Command to run your application (run the transpiled JavaScript file)
+CMD ["node", "dist/app.js"]
